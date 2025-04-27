@@ -1,0 +1,58 @@
+[
+    {
+        "name": "id",
+        "dbType": "integer,false",
+        "htmlType": "number",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "name": "client_id",
+        "dbType": "integer,false",
+        "htmlType": "number",
+        "validations": "nullable|nullable",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "program_id",
+        "dbType": "integer,false",
+        "htmlType": "number",
+        "validations": "nullable|nullable",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "enrolled_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Program,program_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Client,client_id"
+    }
+]
